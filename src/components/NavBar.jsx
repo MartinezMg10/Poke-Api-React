@@ -1,4 +1,4 @@
-import React from 'react'
+import { Outlet } from "react-router-dom"
 
 const NavBar = () => {
   return (
@@ -10,6 +10,8 @@ const NavBar = () => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/640px-Pokebola-pokeball-png-0.png"  class="h-[10vh] p-4" alt=""/>
             </div>
         </nav>
+
+      <Outlet />
     </>
   )
 }

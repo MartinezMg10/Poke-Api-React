@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AppRouter = () => {
+const pokemonPage = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const AppRouter = () => {
   )
 }
 
-export default AppRouter
+export default pokemonPage

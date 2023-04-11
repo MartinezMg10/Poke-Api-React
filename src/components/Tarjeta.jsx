@@ -1,5 +1,4 @@
 
-
 const Tarjeta = () => {
   return (
     <>
