@@ -15,8 +15,8 @@ const HomePage = () => {
 							))}
       </div>
       <div className="flex justify-center items-center">
-                <button className='h-[30px] w-[100px] bg-green-500' onClick={onClickLoadMore}>
-                    Cargar más
+                <button className='ov-btn-slide-left mb-10 font-bold mt-4' onClick={onClickLoadMore}>
+                    Cargar más...
                 </button>
             </div>
     </>

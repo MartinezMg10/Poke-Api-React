@@ -26,6 +26,7 @@ const onSearchSubmit = e => {
             </Link>
             <div className="mt-5  h-[10vh] w-[50vw] rounded-2xl flex  bg-white border-2">
             <form onSubmit={onSearchSubmit}>
+            <div>
             <input
               className="outline-none  h-[9vh] w-[44vw] p-5 rounded-2xl "
               type='search'
@@ -34,6 +35,7 @@ const onSearchSubmit = e => {
 							onChange={onInputChange}
 							placeholder='Buscar nombre de pokemon'
             />
+            </div>
             </form>
             </div>
         </nav>

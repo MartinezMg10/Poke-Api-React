@@ -58,42 +58,42 @@ const pokemonPage = () => {
 						<div className='flex flex-col g-5 flex-1'>
 							<div className='flex items-center g-5 mb-4 '>
 								<span className='flex-[20%] font-semibold text-lg'>Hp</span>
-								<div className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></div>
+								<progress id="file" max="100" value={pokemon.stats[0].base_stat} className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></progress>
 								<span className='flex-[20%] font-semibold text-xl'>
 									{pokemon.stats[0].base_stat}
 								</span>
 							</div>
 							<div className='flex items-center g-5 mb-4'>
 								<span className='flex-[20%] font-semibold text-lg'>Attack</span>
-								<div className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></div>
+								<progress id="file" max="100" value={pokemon.stats[1].base_stat} className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></progress>
 								<span className='flex-[20%] font-semibold text-xl'>
 									{pokemon.stats[1].base_stat}
 								</span>
 							</div>
 							<div className='flex items-center g-5 mb-4'>
 								<span className='flex-[20%] font-semibold text-lg'>Defense</span>
-								<div className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></div>
+								<progress id="file" max="100" value={pokemon.stats[2].base_stat} className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></progress>
 								<span className='flex-[20%] font-semibold text-xl'>
 									{pokemon.stats[2].base_stat}
 								</span>
 							</div>
 							<div className='flex items-center g-5 mb-4'>
 								<span className='flex-[20%] font-semibold text-lg'>Special Attack</span>
-								<div className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></div>
+								<progress id="file" max="100" value={pokemon.stats[3].base_stat} className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></progress>
 								<span className='flex-[20%] font-semibold text-xl'>
 									{pokemon.stats[3].base_stat}
 								</span>
 							</div>
 							<div className='flex items-center g-5 mb-4'>
 								<span className='flex-[20%] font-semibold text-lg'>Special Defense</span>
-								<div className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></div>
+								<progress id="file" max="100" value={pokemon.stats[4].base_stat} className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></progress>
 								<span className='flex-[20%] font-semibold text-xl'>
 									{pokemon.stats[4].base_stat}
 								</span>
 							</div>
 							<div className='flex items-center g-5 mb-4'>
 								<span className='flex-[20%] font-semibold text-lg'>Speed</span>
-								<div className='w-[100%] h-[30px] bg-green-600 rounded-xl mr-2'></div>
+								<progress id="file" max="100" value={pokemon.stats[5].base_stat} className='w-[100%] h-[30px] bg-green-600 mr-2'></progress>
 								<span className='flex-[20%] font-semibold text-xl'>
 									{pokemon.stats[5].base_stat}
 								</span>

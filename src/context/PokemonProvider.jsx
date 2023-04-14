@@ -39,7 +39,7 @@ const obtenerPokemons = async (limit=20)=>{
     const baseURL = 'https://pokeapi.co/api/v2/';
 
     const res = await fetch(
-        `${baseURL}pokemon?limit=200&offset=0.`
+        `${baseURL}pokemon?limit=500&offset=0.`
     );
     const data = await res.json();
 

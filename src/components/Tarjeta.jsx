@@ -13,12 +13,12 @@ const Tarjeta = ({ pokemon }) => {
           />
           <div className="card-body flex  flex-col justify-center items-center">
             <img
-              className="h-[20vh] w-[15vw] mt-[-10vh] border-[5px] border-white rounded-[50%] bg-white"
+              className="h-[23vh] w-[15vw] mt-[-10vh] "
               src={pokemon.sprites.other.dream_world.front_default}
               alt={`Pokemon ${pokemon.name}`}
             />
             <h1 className="card-body-title">
-              <span className="font-bold">{pokemon.name} </span>{pokemon.stats[0].base_stat} HP
+              <span className="font-bold text-xl">{pokemon.name} </span>{pokemon.stats[0].base_stat} HP
             </h1>
             <p className="card-body-text">{pokemon.base_experience} exp</p>
           </div>
