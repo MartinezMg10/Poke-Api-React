@@ -4,6 +4,7 @@ import Tarjeta from "../components/Tarjeta"
 
 const HomePage = () => {
 
+  const {onClickLoadMore} = useContext(PokemonContext)
   const { allPokemons} = useContext(PokemonContext)
 
   return (
@@ -13,6 +14,11 @@ const HomePage = () => {
 								<Tarjeta pokemon={pokemon} key={pokemon.id} />
 							))}
       </div>
+      <div className="flex justify-center items-center">
+                <button className='h-[30px] w-[100px] bg-green-500' onClick={onClickLoadMore}>
+                    Cargar más
+                </button>
+            </div>
     </>
   )
 }

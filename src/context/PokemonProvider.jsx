@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react"
 import { PokemonContext } from "./PokemonContext"
+import { useForm } from "../hook/useForm";
 
 export const PokemonProvider = ({children}) => {
 
-const [GlobalPokemons,setGlobalPokemons] = useState([])
+    const { valueSearch, onInputChange, onResetForm } = useForm({
+        valueSearch: "",
+      });
+
+const [globalPokemons,setGlobalPokemons] = useState([])
 const [allPokemons,setAllPokemons] = useState([])
 const [offset,setOffset] = useState(0)
 
@@ -30,11 +35,11 @@ const obtenerPokemons = async (limit=20)=>{
         setLoading(false)
 }
 
-/*  const getGlobalPokemons = async () => {
+    const getGlobalPokemons = async () => {
     const baseURL = 'https://pokeapi.co/api/v2/';
 
     const res = await fetch(
-        `${baseURL}pokemon?limit=100000&offset=0.`
+        `${baseURL}pokemon?limit=200&offset=0.`
     );
     const data = await res.json();
 
@@ -47,7 +52,7 @@ const obtenerPokemons = async (limit=20)=>{
 
     setGlobalPokemons(results);
     setLoading(false)
-}; */
+};
 
 const llamarPokemonId = async (id) =>  {
     const baseURL = 'https://pokeapi.co/api/v2/';
@@ -59,18 +64,25 @@ const llamarPokemonId = async (id) =>  {
 
 useEffect(() =>{
     obtenerPokemons();
+},[offset])
+
+useEffect(() =>{
+    getGlobalPokemons();
 },[])
 
-/* useEffect(() =>{
-    getGlobalPokemons();
-},[])  */
-
+const onClickLoadMore = () => {
+    setOffset(offset + 20);
+  };
 
     return (
         <PokemonContext.Provider value={{
            allPokemons,
-           GlobalPokemons,
-            llamarPokemonId
+           globalPokemons,
+            llamarPokemonId,
+            valueSearch,
+            onInputChange,
+            onResetForm,
+            onClickLoadMore
         }}>
             {children}
         </PokemonContext.Provider>
